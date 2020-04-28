@@ -1,6 +1,6 @@
 ---
 #Ansible role for installing windows packages using Chocolatey
-- name: Install notepadplusplus version 6.6
+- name: Install notepadplusplus
   win_chocolatey:
     name: notepadplusplus
-    version: '6.6'
+    state: latest
