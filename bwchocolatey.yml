@@ -13,5 +13,5 @@
       win_chocolatey:
         name: "{{ item }}"
         state: present
-      with_items: "{{ BW_WINDOWS_PACKAGES }}"
+      with_items: "{{ BW_WINDOWS_PACKAGE }}"
       when: BW_WINDOWS_PACKAGE is defined
