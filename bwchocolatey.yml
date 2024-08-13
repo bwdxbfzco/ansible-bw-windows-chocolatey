@@ -15,3 +15,11 @@
         state: present
       with_items: "{{ BW_WINDOWS_PACKAGE }}"
       when: BW_WINDOWS_PACKAGE is defined
+
+    - name: Display package state
+      win_chocolatey_facts:
+        register: choco_facts
+
+    - name: Display package state
+      debug:
+         var: choco_facts
