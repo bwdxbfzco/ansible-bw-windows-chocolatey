@@ -13,4 +13,4 @@
       win_chocolatey:
         name: "{{ BW_WINDOWS_PACKAGE }}"
         state: {{ BW_WINDOWS_STATE | default('present') }}
-        when: BW_WINDOWS_PACKAGE is defined
+      when: BW_WINDOWS_PACKAGE is defined
