@@ -1,6 +1,10 @@
 ---
 #Ansible role for installing windows packages using Chocolatey
-- name: Install notepadplusplus
-  win_chocolatey:
-    name: notepadplusplus
-    state: latest
+- name:  Windows Update
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Install notepadplusplus
+      win_chocolatey:
+        name: notepadplusplus
+        state: latest
