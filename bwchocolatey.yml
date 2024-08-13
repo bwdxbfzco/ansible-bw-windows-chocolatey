@@ -11,6 +11,7 @@
 
     - name: Install package
       win_chocolatey:
-        name: "{{ BW_WINDOWS_PACKAGE }}"
+        name: "{{ item }}"
         state: {{ BW_WINDOWS_STATE | default('present') }}
+      with_items: "{{ BW_WINDOWS_PACKAGES }}"
       when: BW_WINDOWS_PACKAGE is defined
